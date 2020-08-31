@@ -15,7 +15,7 @@
 .nav-list-item-link,
 .contacts-list-item-link {
   font-weight: 500;
-  line-height: 1.14;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   text-decoration: none;
   color: $primary-text-color;
@@ -37,44 +37,38 @@
   font-style: normal;
 }
 .current-link {
-  color: $accent-color;
   display: block;
   padding-bottom: 0px;
+  .nav-list-item-link {
+    color: $accent-color;
+  }
   &::after {
     display: block;
     content: "";
     height: 4px;
     width: 100%;
     background-color: $accent-color;
-    margin-top: 28px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .address {
+    display: flex;
+    align-items: center;
+  }
+  .contacts-list-item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .contacts-list-item-link {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .nav-list {
+    margin-right: 84px;
   }
 }
 
-@media screen and (min-width: 768px) {
-  .header .container {
-    display: flex;
-  }
-  .address {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-  }
-  .nav {
-    display: flex;
-    align-items: center;
-  }
-  .nav-list {
-    display: flex;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .nav-list-item-link,
-  .contacts-list-item-link {
-    padding-bottom: 32px;
-    padding-top: 32px;
-  }
-}
-@media screen and (max-width: 565px) {
+@media screen and (max-width: 767px) {
   .nav {
     display: flex;
     justify-content: space-between;
@@ -106,11 +100,12 @@
     display: none;
     position: absolute;
     left: 0;
-    top: 72px;
+    top: 60px;
     width: 100%;
     background-color: $primary-background-color;
     border-top: 1px solid #ececec;
     height: 480px;
+    z-index: 1;
     &.is-open {
       display: block;
     }
@@ -133,6 +128,10 @@
     align-items: center;
     flex-direction: column;
   }
+  .contacts-list-item-link {
+    font-size: 18px;
+    line-height: 1.67;
+  }
   .contacts-list-item:not(:last-child) {
     margin-bottom: 16px;
   }
@@ -141,5 +140,50 @@
   }
   .current-link::after {
     margin-top: 8px;
+  }
+  .address {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header .container {
+    display: flex;
+  }
+  .menu-button {
+    display: none;
+  }
+
+  .nav-list-item-link {
+    padding-bottom: 32px;
+    padding-top: 32px;
+  }
+  .nav {
+    display: flex;
+  }
+  .nav-list {
+    display: flex;
+  }
+  .nav-list-item:not(:last-child) {
+    margin-right: 50px;
+  }
+  .menu-container {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts-list-item-link {
+    padding-bottom: 32px;
+    padding-top: 32px;
+  }
+  .contacts-list {
+    display: flex;
+  }
+  .contacts-list-item:not(:last-child) {
+    margin-right: 30px;
+  }
+  .nav-list {
+    margin-right: 305px;
   }
 }

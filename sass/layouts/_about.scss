@@ -35,7 +35,7 @@
   letter-spacing: 0.03em;
   color: $secondary-text-color;
 }
-@media screen and (max-width: 565px) {
+@media screen and (max-width: 767px) {
   .about-list {
     margin: auto;
   }
@@ -46,16 +46,29 @@
     margin-bottom: 30px;
   }
 }
+@media screen and (min-width: 768px) {
+  .about-list-item {
+    width: calc((100% - 30px) / 2);
+    &:nth-child(odd) {
+      margin-right: 30px;
+    }
+  }
+
+  .about-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 @media screen and (min-width: 1200px) {
   .about {
     padding-top: 94px;
     padding-bottom: 94px;
   }
-  .about-list {
-    display: flex;
-  }
-  .about-list-item:not(:last-child) {
-    margin-right: 30px;
+  .about-list-item {
+    width: calc((100% - 30px - 90px) / 4);
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
   .about-list-item-container {
     width: 270px;

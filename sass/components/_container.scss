@@ -3,13 +3,8 @@
   padding-right: 15px;
   margin: auto;
 }
-@media screen and (min-width: 565px) {
-  width: 565px;
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
-
-// .container {
-//   width: 1200px;
-//   padding-left: 15px;
-//   padding-right: 15px;
-//   margin: auto;
-// }

@@ -8,6 +8,13 @@
 .team-list-item {
   background-color: $primary-background-color;
   padding-bottom: 24px;
+
+  &:hover,
+  &:focus {
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      0px 1px 1px rgba(0, 0, 0, 0.12);
+    transform: translateY(0px);
+  }
 }
 .team-title {
   margin-bottom: 30px;
@@ -28,10 +35,26 @@
   font-weight: 400;
   color: $secondary-text-color;
 }
-
-@media screen and (max-width: 565px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .team-list {
+    flex-wrap: wrap;
+  }
+  .team-list-item {
+    min-width: 45%;
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 30px;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
   .team-list-item:not(:last-child) {
     margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .team-list {
+    display: flex;
+    justify-content: space-around;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -41,16 +64,13 @@
   }
   .team-list {
     display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
   }
+
   .team-list-item {
     &:not(:last-child) {
       margin-right: 30px;
-    }
-    &:hover,
-    &:focus {
-      box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16),
-        0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
-      transform: translateY(0px);
     }
   }
   .team-list-img {

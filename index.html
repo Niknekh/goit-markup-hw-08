@@ -28,8 +28,8 @@
           
           <div class="menu-container" data-menu>
             <ul class="nav-list list">
-              <li class="nav-list-item">
-                <a href="./index.html" class="nav-list-item-link current-link">Студия</a>
+              <li class="nav-list-item current-link">
+                <a href="./index.html" class="nav-list-item-link ">Студия</a>
               </li>
               <li class="nav-list-item">
                 <a href="./portfolio.html" class="nav-list-item-link">Портфолио</a>
@@ -171,8 +171,11 @@
           <h2 class="team-title">Наша команда</h2>
           <ul class="team-list list">
             <li class="team-list-item">
-             <picture><source srcset="./images/team/mobile/team1.jpg" type="image/jpg" media="(max-width:565px)">
-              <img src="./images/team/team1.jpg" alt="Николай Кучеренко" class="team-list-img" /></picture> 
+             <picture>
+               <source srcset="./images/team/mobile/team1.jpg" type="image/jpg" media="(max-width:767px)">
+              <source srcset="./images/team/tablet/team1.jpg" type="image/jpg" media="(max-width:1199px)">
+              <source srcset="./images/team/team1.jpg" type="image/jpg" media="(min-width:1200px)">
+                 <img src="./images/team/team1.jpg" alt="Николай Кучеренко" class="team-list-img" /></picture> 
               <h3 class="team-list-item-title">Николай Кучеренко</h3>
               <p lang="en" class="team-list-item-desc">Product Designer</p>
               <ul class="social-list list">
@@ -215,7 +218,11 @@
             </li>
             <li class="team-list-item">
               <picture>
-                <source srcset="./images/team/mobile/team2.jpg" type="image/jpg" media="(max-width:565px)"><img
+                <source srcset="./images/team/mobile/team2.jpg" type="image/jpg" media="(max-width:767px)">
+                <source srcset="./images/team/tablet/team2.jpg" type="image/jpg" media="(max-width:1199px)">
+                
+                  <source srcset="./images/team/team2.jpg" type="image/jpg" media="(min-width:1200px)">
+                    <img
                   src="./images/team/team2.jpg"
                 alt="Ольга Иванова"
                 class="team-list-img"
@@ -262,7 +269,11 @@
             </li>
             <li class="team-list-item">
               <picture>
-                <source srcset="./images/team/mobile/team3.jpg" type="image/jpg" media="(max-width:565px)"><img
+                <source srcset="./images/team/mobile/team3.jpg" type="image/jpg" media="(max-width:767px)">
+                <source srcset="./images/team/tablet/team3.jpg" type="image/jpg" media="(max-width:1199px)">
+               
+                  <source srcset="./images/team/team3.jpg" type="image/jpg" media="(min-width:1200px)">
+                    <img
                   src="./images/team/team3.jpg"
                 alt="Андрей Шевченко"
                 class="team-list-img"
@@ -309,7 +320,11 @@
             </li>
             <li class="team-list-item">
               <picture>
-                <source srcset="./images/team/mobile/team4.jpg" type="image/jpg" media="(max-width:565px)"><img
+                <source srcset="./images/team/mobile/team4.jpg" type="image/jpg" media="(max-width:767px)">
+                <source srcset="./images/team/tablet/team4.jpg" type="image/jpg" media="(max-width:1199px)">
+                
+                  <source srcset="./images/team/team4.jpg" type="image/jpg" media="(min-width:1200px)">
+                    <img
                   src="./images/team/team4.jpg"
                 alt="Иван Николаев"
                 class="team-list-img"
@@ -438,31 +453,19 @@
     <!-- Футер -->
     <footer class="footer">
       <div class="container">
-        <div class="contacts">
-          <a href="index.html" lang="en" class="logo-link"
-            ><span class="logo-link-accent">Web</span>studio</a
-          >
+        <div class="contacts-connect-wrapper"><div class="contacts">
+          <a href="index.html" lang="en" class="logo-link"><span class="logo-link-accent">Web</span>studio</a>
           <address class="contacts-list-wrapper">
             <ul class="contacts-list list">
               <li class="contacts-list-item">
-                <a
-                  class="contacts-list-item-link contacts-location-link"
-                  href="https://goo.gl/maps/Spt2SCFKa88WKhuq7"
-                  >г. Киев, пр-т Леси Украинки, 26</a
-                >
+                <a class="contacts-list-item-link contacts-location-link" href="https://goo.gl/maps/Spt2SCFKa88WKhuq7">г. Киев,
+                  пр-т Леси Украинки, 26</a>
               </li>
               <li class="contacts-list-item">
-                <a
-                  class="contacts-list-item-link"
-                  href="mailto:info@example.com"
-                  lang="en"
-                  >info@example.com</a
-                >
+                <a class="contacts-list-item-link" href="mailto:info@example.com" lang="en">info@example.com</a>
               </li>
               <li class="contacts-list-item">
-                <a class="contacts-list-item-link" href="tel:+380991111111"
-                  >+38 099 111 11 11</a
-                >
+                <a class="contacts-list-item-link" href="tel:+380991111111">+38 099 111 11 11</a>
               </li>
             </ul>
           </address>
@@ -471,40 +474,34 @@
           <b class="connect-form-slogan">присоединяйтесь</b>
           <ul class="social-list list">
             <li class="social-list-item">
-              <a href="" class="social-list-item-link" aria-label="Инстаграм"
-                ><svg
-                  class="social-list-item-svg social-list-item-svg-instagram"
-                >
-                  <use href="./images/sprite.svg#icon-instagram"></use></svg
-              ></a>
+              <a href="" class="social-list-item-link" aria-label="Инстаграм"><svg
+                  class="social-list-item-svg social-list-item-svg-instagram">
+                  <use href="./images/sprite.svg#icon-instagram"></use>
+                </svg></a>
             </li>
-
+        
             <li class="social-list-item">
-              <a href="" class="social-list-item-link" aria-label="Твитер"
-                ><svg class="social-list-item-svg social-list-item-svg-twitter">
-                  <use href="./images/sprite.svg#icon-twitter"></use></svg
-              ></a>
+              <a href="" class="social-list-item-link" aria-label="Твитер"><svg
+                  class="social-list-item-svg social-list-item-svg-twitter">
+                  <use href="./images/sprite.svg#icon-twitter"></use>
+                </svg></a>
             </li>
-
+        
             <li class="social-list-item">
-              <a href="" class="social-list-item-link" aria-label="Фейсбук"
-                ><svg
-                  class="social-list-item-svg social-list-item-svg-facebook"
-                >
-                  <use href="./images/sprite.svg#icon-facebook"></use></svg
-              ></a>
+              <a href="" class="social-list-item-link" aria-label="Фейсбук"><svg
+                  class="social-list-item-svg social-list-item-svg-facebook">
+                  <use href="./images/sprite.svg#icon-facebook"></use>
+                </svg></a>
             </li>
-
+        
             <li class="social-list-item">
-              <a href="" class="social-list-item-link" aria-label="Линкедин"
-                ><svg
-                  class="social-list-item-svg social-list-item-svg-linkedin"
-                >
-                  <use href="./images/sprite.svg#icon-linkedin"></use></svg
-              ></a>
+              <a href="" class="social-list-item-link" aria-label="Линкедин"><svg
+                  class="social-list-item-svg social-list-item-svg-linkedin">
+                  <use href="./images/sprite.svg#icon-linkedin"></use>
+                </svg></a>
             </li>
           </ul>
-        </div>
+        </div></div>
         <div class="footer-form-wrapper">
           <b class="footer-form-title">Подпишитесь на рассылку</b>
           <form action="" class="footer-form">
