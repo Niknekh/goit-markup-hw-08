@@ -1,0 +1,12 @@
+@import "./base/normalize";
+@import "./utils/variables";
+@import "./base/base";
+
+@import "./components/h2-titles";
+@import "./components/container";
+@import "./components/social-links";
+
+@import "./layouts/portfolio-main";
+@import "./layouts/header-footer/common/header-footer-common";
+@import "./layouts/header-footer/header";
+@import "./layouts/header-footer/footer";

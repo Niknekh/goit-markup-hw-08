@@ -1,0 +1,18 @@
+@import "./base/normalize";
+@import "./utils/variables";
+@import "./base/base";
+
+@import "./components/h2-titles";
+@import "./components/container";
+@import "./components/social-links";
+
+@import "./layouts/header-footer/common/header-footer-common";
+@import "./layouts/header-footer/header";
+@import "./layouts/hero";
+@import "./layouts/works";
+@import "./layouts/about";
+@import "./layouts/team";
+@import "./layouts/clients";
+@import "./layouts/header-footer/footer";
+
+@import "./components/modal";

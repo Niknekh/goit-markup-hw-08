@@ -1,0 +1,27 @@
+.logo-link {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.67;
+  letter-spacing: 0.03em;
+  color: #000000;
+  text-decoration: none;
+  padding-bottom: 16px;
+  padding-top: 16px;
+}
+.logo-link-accent {
+  color: $accent-color;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts-list {
+    display: flex;
+  }
+  .logo-link {
+    font-size: 26px;
+    line-height: 1.19;
+    margin-right: 85px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+  }
+}
