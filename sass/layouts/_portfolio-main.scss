@@ -120,6 +120,11 @@
   .filter-list {
     margin-bottom: 40px;
   }
+  .gallery-list-item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
 }
 @media screen and (min-width: 768px) {
   .gallery-list {
@@ -156,6 +161,7 @@
   }
   .gallery-list-item {
     width: 370px;
+    height: 404px;
     &:not(:nth-child(3n)) {
       margin-right: 30px;
     }
